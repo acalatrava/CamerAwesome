@@ -104,8 +104,14 @@ class AwesomeTopActions extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            AwesomeFlashButton(state: state),
+            InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Icon(Icons.close)),
             AwesomeAspectRatioButton(state: state),
+            AwesomeFlashButton(state: state),
+
             //AwesomeLocationButton(state: state),
           ],
         ),
